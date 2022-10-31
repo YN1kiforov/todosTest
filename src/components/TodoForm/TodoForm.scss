@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap");
+.todo {
+	max-width: 400px;
+	margin: 0 auto;
+	text-align: center;
+	&__title {
+		font-family: "Quicksand", sans-serif;
+		font-size: 70px;
+		font-weight: 300;
+		margin: 0px 0px 20px 0px;
+		color: #ddc3d4;
+	}
+	&__container {
+		background-color: #fff;
+		box-shadow: 0px 8px 17px 5px rgba(34, 60, 80, 0.2);
+		position: relative;
+		z-index: 111;
+
+		border: 1px solid rgb(197, 197, 197);
+		&::after,
+		&::before {
+			content: "";
+			height: 4px;
+			top: 100%;
+			left: 50%;
+			position: absolute;
+			background-color: rgb(245, 245, 245);
+			border: 1px solid rgb(197, 197, 197);
+			box-shadow: 0px 0px 2px 0px rgba(34, 60, 80, 0.3);
+		}
+		&::after {
+			width: calc(100% - 10px);
+			transform: translate(-50%, 0px);
+		}
+		&::before {
+			width: calc(100% - 20px);
+			transform: translate(-50%, 4px);
+		}
+	}
+	&__input {
+		width: 100%;
+		&::placeholder {
+			font-style: italic;
+			color: #00000054;
+		}
+	}
+	&__list {
+		border-top: 1px solid gray;
+		text-align: left;
+		& li {
+			border-bottom: 1px rgb(172, 172, 172) solid;
+		}
+	}
+	&__bottom {
+		padding: 0px 0px 0px 7px;
+		color: rgb(80, 80, 80);
+		min-height: 30px;
+		align-items: center;
+		display: flex;
+		justify-content: space-between;
+		& button {
+			color: rgb(80, 80, 80);
+		}
+	}
+	&__items-left {
+		text-align: left;
+		flex: 25% 0;
+	}
+}
